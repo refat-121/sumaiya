@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Sumaiya Jannat — Premium ✨</title>
+  <meta name="description" content="A premium red & black animated love page for Sumaiya Jannat"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#e50914;       /* Netflix red vibe */
+      --dark:#0a0b0f;      /* near-black */
+      --dark-2:#121319;    /* card surface */
+      --text:#f5f6fa;
+      --muted:#b7b9c3;
+      --glow: 0 0 24px rgba(229,9,20,.55), 0 0 60px rgba(229,9,20,.25);
+      --glass: rgba(255,255,255,.06);
+      --glass-stroke: rgba(255,255,255,.12);
+      --gold:#d3b26d;      /* subtle premium accent */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 70% -10%, rgba(229,9,20,.25), transparent 60%),
+                  radial-gradient(1000px 600px at -10% 30%, rgba(229,9,20,.18), transparent 60%),
+                  linear-gradient(180deg, #0b0b0f 0%, #000 100%);
+      overflow-x:hidden;
+    }
+
+    /* premium noise film */
+    .grain{position:fixed;inset:0;pointer-events:none;opacity:.08;mix-blend:soft-light;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.45"/></svg>');animation:gr 12s steps(10) infinite}
+    @keyframes gr{to{transform:translate3d(-10px,10px,0)}}
+
+    /* floating particles */
+    .particles{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+    .p{position:absolute;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #fff, rgba(255,255,255,.4) 35%, rgba(229,9,20,.35) 36%, rgba(229,9,20,.05));box-shadow:var(--glow);filter:saturate(1.2);animation:rise linear infinite}
+    @keyframes rise{from{transform:translateY(100vh) scale(.7)}to{transform:translateY(-10vh) scale(1.1)}}
+
+    header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 20px}
+    .logo{font-family:'Playfair Display',serif;font-weight:800;letter-spacing:.3px}
+    .logo .r{color:var(--red);text-shadow:0 3px 20px rgba(229,9,20,.5)}
+    .cta{margin-left:auto;background:linear-gradient(135deg, #ff1f2a, #7a0a10);border:1px solid rgba(255,255,255,.12);box-shadow:var(--glow);color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+    .cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(229,9,20,.35)}
+
+    .hero{position:relative;max-width:1100px;margin:44px auto 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;padding:0 20px}
+    .h-title{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,6vw,68px);line-height:1.05;margin:6px 0 12px}
+    .h-title .name{color:#fff;background:linear-gradient(90deg,#fff, #fdd);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 8px 40px rgba(229,9,20,.25)}
+    .sub{color:var(--muted);font-size:clamp(14px,2.2vw,18px)}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid var(--glass-stroke);border-radius:28px;padding:24px;backdrop-filter: blur(12px) saturate(140%);box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 20px 60px rgba(0,0,0,.35)}
+
+    /* shining divider */
+    .divider{height:2px;background:linear-gradient(90deg, transparent, rgba(211,178,109,.8), transparent);filter:blur(.2px);margin:16px 0}
+
+    .grid{max-width:1100px;margin:20px auto;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+
+    .card{position:relative;border-radius:24px;padding:20px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.015));border:1px solid var(--glass-stroke);backdrop-filter: blur(10px) saturate(140%);box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 12px 40px rgba(0,0,0,.35)}
+    .card h3{margin:0 0 6px;font-weight:800;letter-spacing:.2px}
+    .card p{margin:0;color:var(--muted)}
+
+    /* big heart emblem */
+    .emblem{display:grid;place-items:center;isolation:isolate}
+    .emblem svg{width:min(240px,56vw);height:auto;filter:drop-shadow(0 22px 60px rgba(229,9,20,.45))}
+
+    /* luxury button */
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:linear-gradient(135deg, #ff2d2d, #7a0a10);border:1px solid rgba(255,255,255,.14);box-shadow:var(--glow);font-weight:800;letter-spacing:.2px;color:#fff;cursor:pointer;transition:transform .2s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(229,9,20,.36)}
+
+    .note{max-width:1100px;margin:14px auto 60px;padding:0 20px;color:var(--muted);text-align:center}
+    footer{padding:26px 16px;border-top:1px solid rgba(255,255,255,.06);text-align:center;color:#8c8f9a}
+
+    /* petal confetti */
+    .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+    .petal{position:absolute;width:14px;height:10px;background:radial-gradient(circle at 30% 30%, #fff 0 10%, #ffb0b0 11% 40%, #e50914 41%);border-radius:70% 60% 80% 30%/60% 70% 40% 80%;opacity:.95;box-shadow:0 6px 20px rgba(229,9,20,.35);animation:fall linear forwards}
+    @keyframes fall{from{transform:translate3d(var(--x,0),-10vh,0) rotate(0)}to{transform:translate3d(calc(var(--x,0) + 20px),110vh,0) rotate(420deg);opacity:.9}}
+
+    /* subtle glow ring */
+    .glowring{position:absolute;inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:70vmin;height:70vmin;border-radius:50%;background:radial-gradient(circle, rgba(229,9,20,.25) 0, rgba(229,9,20,.08) 35%, transparent 60%);filter:blur(30px);z-index:-1}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="particles" id="particles"></div>
+  <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+  <header>
+    <nav class="nav">
+      <div class="logo">SJ<span class="r">❤</span>R</div>
+      <button class="cta" id="petalBtn">Send Love</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h1 class="h-title">For <span class="name">Sumaiya Jannat</span></h1>
+        <div class="divider"></div>
+        <p class="sub">তোমার প্রিয় রং <b style="color:var(--red)">Red</b> & <b>Black</b>— তাই পুরো পেইজটাই রাখা হয়েছে প্রিমিয়াম রেড-অ্যান্ড-ব্ল্যাক থিমে।
+           এই পেইজটা শুধু তোমার জন্য—একটা প্রতিশ্রুতি, প্রতিদিন একটু একটু করে আরও আপন হওয়ার।</p>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="surprise">Surprise ✨</button>
+          <button class="btn" id="theme">Switch subtle theme</button>
+        </div>
+      </div>
+      <div class="emblem">
+        <div class="glowring"></div>
+        <!-- Luxury heart emblem -->
+        <svg viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="gRed" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ff4d4f"/>
+              <stop offset="60%" stop-color="#e50914"/>
+              <stop offset="100%" stop-color="#7a0a10"/>
+            </linearGradient>
+            <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="6" result="B"/>
+              <feMerge>
+                <feMergeNode in="B"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <path filter="url(#softGlow)" fill="url(#gRed)" d="M110 182s-62-38-84-77c-11-19-10-49 10-66 20-17 50-11 66 10 16-21 46-27 66-10 20 17 21 47 10 66-22 39-68 65-68 65l0 12z"/>
+          <circle cx="110" cy="45" r="6" fill="url(#gRed)"></circle>
+          <circle cx="150" cy="60" r="3" fill="url(#gRed)"></circle>
+        </svg>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>মেসেজ #১</h3>
+        <p>তুমি হাসলে আমার দুনিয়া লাল গোলাপ হয়ে যায়।</p>
+      </div>
+      <div class="card">
+        <h3>মেসেজ #২</h3>
+        <p>Black রাতেও তুমি আমার জন্য সবচেয়ে উজ্জ্বল নক্ষত্র।</p>
+      </div>
+      <div class="card">
+        <h3>প্রতিশ্রুতি</h3>
+        <p>শত ব্যস্ততার মাঝেও—তোমার জন্য সময় থাকবে, সবসময়।</p>
+      </div>
+    </section>
+
+    <p class="note">Tip: এটা Messenger/WhatsApp-এ লিংক করে পাঠাও বা ছোট ভিডিও করে শেয়ার করো। চাইলে তোমাদের ছবি দিয়ে একটা গ্যালারিও যোগ করা যাবে।</p>
+  </main>
+
+  <footer>
+    © <span id="year"></span> You ❤ Sumaiya — Premium Edition
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Floating particles generation (subtle red glow)
+    const P = document.getElementById('particles');
+    const rand = (a,b)=>Math.random()*(b-a)+a;
+    function spawnParticle(){
+      const n=document.createElement('div');n.className='p';
+      n.style.left=rand(-5,100)+'vw';
+      n.style.animationDuration=rand(10,22)+'s';
+      n.style.filter = 'saturate(' + rand(1.1,1.5) + ')';
+      P.appendChild(n);
+      setTimeout(()=>n.remove(), 24000);
+    }
+    for(let i=0;i<24;i++) spawnParticle();
+    setInterval(spawnParticle,900);
+
+    // Petal confetti
+    function petals(count=100){
+      const C = document.getElementById('confetti');
+      for(let i=0;i<count;i++){
+        const x = rand(0,100);
+        const d = document.createElement('div');
+        d.className = 'petal';
+        d.style.left = x + 'vw';
+        d.style.setProperty('--x', (rand(-30,30))+'px');
+        const dur = rand(3,6);
+        d.style.animationDuration = dur+'s';
+        C.appendChild(d);
+        setTimeout(()=>d.remove(), dur*1000+120);
+      }
+    }
+    document.getElementById('petalBtn').addEventListener('click', ()=>petals(120));
+
+    // Surprise: gold flash + quote swap
+    const quotes = [
+      'তুমি আমার today, tomorrow, forever.',
+      'Red & Black—like our vibe: bold and classy.',
+      'তোমার চোখের দিকে তাকালেই পৃথিবী থমকে যায়।'
+    ];
+    let qi = 0;
+    document.getElementById('surprise').addEventListener('click', ()=>{
+      const bar = document.createElement('div');
+      bar.style.position='fixed';bar.style.left='-10%';bar.style.top='45%';bar.style.width='120%';bar.style.height='4px';
+      bar.style.background='linear-gradient(90deg, transparent, rgba(211,178,109,1), transparent)';
+      bar.style.filter='blur(.5px)';bar.style.zIndex='30';
+      document.body.appendChild(bar);
+      bar.animate([{transform:'translateX(-120%)'},{transform:'translateX(120%)'}],{duration:900,easing:'cubic-bezier(.2,.6,.2,1)'});
+      setTimeout(()=>bar.remove(), 950);
+      // swap first card text
+      const first = document.querySelector('.grid .card p');
+      qi=(qi+1)%quotes.length; first.textContent = quotes[qi];
+      // bonus petals
+      petals(60);
+    });
+
+    // Theme switcher (subtle variants of red/black)
+    const themes = [
+      ['#e50914','#0a0b0f'],
+      ['#ff2d55','#0a0a0a'],
+      ['#c11119','#151515']
+    ];
+    let t=0;
+    document.getElementById('theme').addEventListener('click',()=>{
+      t=(t+1)%themes.length;
+      const [r,d] = themes[t];
+      document.documentElement.style.setProperty('--red', r);
+      document.documentElement.style.setProperty('--dark', d);
+      document.body.style.background = `radial-gradient(1200px 800px at 70% -10%, ${r}40, transparent 60%), radial-gradient(1000px 600px at -10% 30%, ${r}2e, transparent 60%), linear-gradient(180deg, ${d} 0%, #000 100%)`;
+    });
+  </script>
+</body>
+</html>
